@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#010661">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relative_meter"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp">
+
+                    <ImageView
+                        android:id="@+id/showTheSpeedMeter_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:paddingTop="5dp"
+                        app:srcCompat="@drawable/meter" />
+
+                    <ImageView
+                        android:id="@+id/showTheNail_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="7dp"
+                        app:srcCompat="@drawable/show_meter_bar" />
+
+                    <TextView
+                        android:id="@+id/text_digital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/trebucbd"
+                        android:padding="10dp"
+                        android:text="0.00"
+                        android:textColor="#00FFFE"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/onStartBtnTheRun_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:text=""
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/startBtn1unlock"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/colorPrimary"
+                        android:elevation="0dp"
+                        android:shadowRadius="15"
+                        android:text="Begin Test"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/showDownAndUploadSpeed_id"
+                    android:layout_width="300dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/relative_meter"
+                    android:layout_centerHorizontal="true"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/showOnTheLinearLayoutDown_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/down"/>
+                            <TextView
+                                android:id="@+id/showDownSpeedInText_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="Download"
+                                android:textColor="#333333"
+                                android:fontFamily="@font/trebucbd"
+                                android:textSize="18sp"
+                                android:textStyle="normal|bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/showDownSpeedInNum_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="0 Mbps"
+                            android:textColor="#333333"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/showOnTheLinearLayoutUpload_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_circle2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@drawable/up"/>
+
+                        <TextView
+                            android:id="@+id/showUploadSpeedInText_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Upload"
+                            android:fontFamily="@font/trebucbd"
+                            android:textColor="#00FFFE"
+                            android:textSize="18sp"
+                            android:textStyle="normal|bold" />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/showUploadSpeedInNum_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/trebucbd"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="0 mbps"
+                            android:textColor="#00FFFE"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_ping"
+                    android:layout_width="110dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/showDownAndUploadSpeed_id"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Ping"
+                        android:textColor="#00FFFE"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/trebucbd"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:id="@+id/pingTxtView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/trebucbd"
+                        android:gravity="center_horizontal"
+                        android:text="0 ms"
+                        android:textColor="#00FFFE"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/showLinearWifi_ISP_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lin_ping"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        app:srcCompat="@drawable/ic_isp" />
+
+                    <TextView
+                        android:id="@+id/showWifi_ISP_Text_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ISP"
+                        android:fontFamily="@font/trebucbd"
+                        android:textColor="#00FFFE"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/showLinearWifiHostLocation_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showLinearWifi_ISP_id"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:padding="3dp"
+                        app:srcCompat="@drawable/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/showWifiHostLocationText_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location"
+                        android:fontFamily="@font/trebucbd"
+                        android:textColor="#00FFFE"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

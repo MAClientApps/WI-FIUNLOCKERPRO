@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WI-FI UNLOCKER PRO</string>
+    <string name="neel_wifi">Neel WiFi</string>
+    <string name="security_type_wpa2">Security type WPA2</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCxlxyu9qtkv5d6VXp0uLPkv4ZStX8W1O0
+    </string>
+</resources>
